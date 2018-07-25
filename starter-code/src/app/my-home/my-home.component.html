@@ -1,3 +1,9 @@
-<p>
-  my-home works!
-</p>
+<div class="movies">
+  <div class="movie" *ngFor="let movie of ms.getMovies()">
+    <h3>ROOM {{movie.room}}</h3>
+    <img src="{{movie.poster}}">
+    <a [routerLink]="['/movie',movie.id]">
+      <button class="action-button shadow animate yellow">{{movie.title}}</button>
+    </a>
+  </div>
+</div>

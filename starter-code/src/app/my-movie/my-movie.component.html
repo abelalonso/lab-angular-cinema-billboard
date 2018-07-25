@@ -1,3 +1,37 @@
-<p>
-  my-movie works!
-</p>
+<div class="container">
+  <h1><span>Room {{thisMovie.room}}</span> {{thisMovie.title}}</h1>
+  <div class="movie">
+    <div class="image-wrap">
+      <img src="{{thisMovie.poster}}">
+    </div>
+    <div class="resume">
+      <div class="genres">
+        <h3>Genres:</h3>
+        <ul>
+          <li *ngFor="let genre of thisMovie.genres">{{genre}}</li>
+        </ul>
+      </div>
+      <div class="year">
+        <h3>Year:</h3>
+        <p>{{thisMovie.year}}</p>
+      </div>
+      <div class="actors">
+        <h3>Actors:</h3>
+        <ul>
+          <li *ngFor="let actor of thisMovie.actors">{{actor}}</li>
+        </ul>
+      </div>
+      <div class="schedule">
+        <h3>Schedule:</h3>
+        <ul>
+          <li *ngFor="let hour of thisMovie.hours">{{hour}}</li>
+        </ul>
+      </div>
+      <div class="synopsis">
+        <h3>Synopsis:</h3>
+        <p>{{thisMovie.synopsis}}</p>
+      </div>
+    </div>
+  </div>
+  <a [routerLink]="['/']"><button class="action-button shadow animate blue">Home</button></a>
+</div>

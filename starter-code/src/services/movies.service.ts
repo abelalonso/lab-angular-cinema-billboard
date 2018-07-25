@@ -1,6 +1,6 @@
 import {Injectable} from "@angular/core";
 
-interface Movie{
+export interface Movie{
 id: number;
 title: string;
 poster: string;
@@ -15,14 +15,9 @@ room: number;
 
 @Injectable()
 export class MoviesService{
-  movies: Array<Movie>;
+  movies: Array<Movie> = require("../sample-movies.js");
   getMovies(): Array<Movie>{return this.movies};
   getMovie(id: number): Movie{
-    this.movies.forEach(e=>{
-      if (e.id === id){
-        return e;
-      }
-    });
-    return;
+    return this.movies.filter(e=>e.id==id)[0];
   }
 }

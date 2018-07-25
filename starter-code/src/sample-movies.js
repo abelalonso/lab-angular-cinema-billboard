@@ -1,4 +1,4 @@
-[
+const movies = [
   {
     id: 1,
     title: "The Shawshank Redemption",
@@ -16,7 +16,9 @@
       "William Sadler",
       "Clancy Brown",
       "Gil Bellows"
-    ]
+    ],
+    hours: ['wednesday: 16:00, 19.45', 'friday: 16:20, 20:10'],
+    room: 1
   }, {
     id: 2,
     title: "The Godfather",
@@ -34,7 +36,9 @@
       "Richard S. Castellano",
       "Robert Duvall",
       "Sterling Hayden"
-    ]
+    ],
+    hours: ['wednesday: 16:00, 19.45', 'friday: 16:20, 20:10'],
+    room: 2
   }, {
     id: 3,
     title: "The Godfather Part II",
@@ -52,8 +56,10 @@
       "Robert De Niro",
       "John Cazale",
       "Talia Shire"
-    ]
-  }, {
+    ],
+    hours: ['wednesday: 16:00, 19.45', 'friday: 16:20, 20:10'],
+    room: 3
+    }, {
     id: 4,
     title: "The Dark Knight",
     poster: "https://i.imgur.com/3jLPB46.jpg",
@@ -70,9 +76,10 @@
       "Michael Caine",
       "Maggie Gyllenhaal",
       "Gary Oldman"
-    ]
+    ],
+    hours: ['wednesday: 16:00, 19.45', 'friday: 16:20, 20:10'],
+    room: 4
   }, {
-  {
     id: 5,
     title: "Schindler's List",
     poster: "https://i.imgur.com/IWZJOmu.jpg",
@@ -89,6 +96,10 @@
       "Caroline Goodall",
       "Jonathan Sagall",
       "Embeth Davidtz"
-    ]
+    ],
+    hours: ['wednesday: 16:00, 19.45', 'friday: 16:20, 20:10'],
+    room: 5
   }
 ]
+
+module.exports = movies;
